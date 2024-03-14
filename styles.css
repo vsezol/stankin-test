@@ -1,0 +1,21 @@
+/*
+    Author Vsevolod Zolotov 2024
+    Telegram: @vsezold
+    Email: vsezold@gmail.com
+*/
+
+.hidden-iframe {
+  position: fixed;
+  /* change position if you want */
+  bottom: 5px;
+  left: 10px;
+  /* change size if you want */
+  width: 600px;
+  height: 200px;
+  z-index: 20000;
+  opacity: 0;
+}
+
+.hidden-iframe:hover {
+  opacity: 1;
+}
