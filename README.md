@@ -59,14 +59,18 @@ const handleSelection = debounce(() => {
     return;
   }
 
+  let answer;
+
   for (let item of answersList) {
     const hasAnswer = item?.question?.toLowerCase()?.includes(selectedText);
 
     if (hasAnswer) {
-      changeHint(item.answer);
+      answer = item.answer;
       break;
     }
   }
+
+  changeHint(answer || "");
 }, DEBOUNCE_TIME);
 
 window.addEventListener("load", () => {
